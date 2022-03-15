@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<button onclick="kiemtra()">Search</button>
+<p id="result"></p>
+<script>
+    function kiemtra() {
+        let nhap = document.getElementById("nhap").value;
+        let flag =0;
+        let tienganh = ["book", "banana", "apple", "drink"];
+        let tiengviet = ["quyển sách", "quả chuối", "quả táo", "uống"];
+            for (let i = 0; i < tienganh.length; i++) {
+                if (nhap == tienganh[i]) {
+                    document.getElementById('result').innerHTML = tienganh[i] + " là : " + tiengviet[i];
+                    flag =1;
+                }
+            }
+            if (flag==0){
+                document.getElementById('result').innerHTML =  nhap + " không có trong từ điển "
+            }
+    }
+</script>
+</body>
+</html>

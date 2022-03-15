@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="an()">Tạo random 10 số nguyên tố</button>
+<p id="display"></p>
+<p id="result"></p>
+<script>
+    function an() {
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            let a = Math.floor(Math.random() * 100);
+            arr.push(a);
+        }
+        document.getElementById('display').innerHTML =arr;
+        let index =0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] >=10) {
+                index++;
+            }
+            document.getElementById('result').innerHTML =index;
+        }
+    }
+</script>
+</body>
+</html>

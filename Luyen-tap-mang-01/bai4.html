@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="num">
+    <button onclick="tao()">Tạo</button>
+<!--    <button onclick="daonguoc()">Đảo ngược</button>-->
+    <p id="result"></p>
+    <p id="nguoc"></p>
+<script>
+    function tao() {
+        let num = document.getElementById('num').value;
+        let arr = [];
+        for (let i=0;i<num;i++){
+            let a = Math.floor(Math.random()*100);
+            arr.push(a);
+        }
+        document.getElementById('result').innerHTML = arr;
+        document.getElementById('nguoc').innerHTML = arr.reverse();
+    }
+    // function daonguoc() {
+    //
+    // }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="num">
+<button onclick="an()">Ấn</button>
+<p id="display"></p>
+<p id="result"></p>
+<script>
+    function an() {
+        let num = document.getElementById('num').value;
+        let arr = [];
+        for (let i =0;i<num;i++){
+            let number = Math.floor(Math.random()*100);
+            arr.push(number);
+        }
+        document.getElementById('display').innerHTML = arr;
+        arr.sort(function (a,b) {
+            return b -a;
+        })
+        document.getElementById('result').innerHTML = arr;
+    }
+</script>
+</body>
+</html>

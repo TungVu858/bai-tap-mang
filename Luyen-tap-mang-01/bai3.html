@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="num"> Nhập
+  <button onclick="an()">Tạo</button>
+    <p id="display"></p>
+  <p id="result"></p>
+    <script>
+        function an() {
+            let arr = [];
+            let index =0;
+            let total =0;
+            let num = document.getElementById('num');
+            for (let i=0;i<num.value;i++){
+                let number = Math.floor(Math.random()*100);
+                arr.push(number);
+                total +=number;
+            }
+            document.getElementById('display').innerHTML = arr ;
+            let max = arr[0];
+            for (let j =1 ;j<arr.length;j++){
+                if (arr[j] >max){
+                    max = arr[j];
+                    index =j;
+                }
+            }
+            document.getElementById('result').innerHTML = "Số lớn nhất : "+max +" Trung bình tổng : " + total/num.value;
+        }
+    </script>
+</body>
+</html>

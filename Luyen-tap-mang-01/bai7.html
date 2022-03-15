@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="num">
+<input id="num2">
+<button onclick="an()">Ấn</button>
+<p id="display"></p>
+<p id="result"></p>
+<script>
+    function an() {
+        let arr = [];
+        let num = document.getElementById('num').value;
+        let num2 = document.getElementById('num2').value;
+        for (let i=0;i<num;i++) {
+            let a = Math.floor(Math.random()*10);
+            arr.push(a);
+        }
+        document.getElementById('display').innerHTML = arr;
+        for (let j=0;j<arr.length;j++){
+            if (num2 == arr[j]){
+                arr.splice(j,1);
+                arr.push(0);
+            }
+        }
+        document.getElementById('result').innerHTML = arr;
+    }
+</script>
+</body>
+</html>

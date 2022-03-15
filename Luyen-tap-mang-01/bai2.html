@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="an()">Tạo 10 số nguyên</button>
+<p id="display"></p>
+<p id="index"></p>
+<script>
+    function an() {
+        let arr = [];
+        let index = 0;
+        for (let i = 0; i < 10; i++) {
+            let num = Math.floor(Math.random() * 100);
+            arr.push(num);
+        }
+        document.getElementById('display').innerHTML = arr;
+        let max = arr[0];
+        for (let j = 1; j < arr.length; j++) {
+            if (arr[j] > max) {
+                max = arr[j];
+                index = j;
+            }
+        }
+        document.getElementById('index').innerHTML = "Vị trí : " + index + " Số là : " + max;
+    }
+</script>
+</body>
+</html>

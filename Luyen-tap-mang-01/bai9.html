@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="an()">Ấn</button>
+<p id="mang1"></p>
+<p id="mang2"></p>
+<p id="mang3"></p>
+<p id="mang4"></p>
+<script>
+    function an() {
+        let arr = [];
+        let arr2 = [];
+        for (let i =0 ;i<10;i++){
+            let num = Math.floor(Math.random()*100);
+            arr.push(num);
+        }
+        document.getElementById('mang1').innerHTML ="Mảng a : " +"[" + arr + "]";
+        for (let j =0 ; j<10;j++){
+            let num2 = Math.floor(Math.random()*100);
+            arr2.push(num2);
+        }
+        document.getElementById('mang2').innerHTML = "Mảng b : " + "[" + arr2 +"]";
+        let arr3 = arr.concat(arr2);
+        document.getElementById('mang3').innerHTML = "Mảng c : " +"[" + arr3 +"]";
+        arr3.sort(function (a,b) {
+            return a - b;
+        })
+        document.getElementById('mang4').innerHTML = "Mảng c từ nhỏ đến lớn : " +"[" + arr3 +"]";
+    }
+</script>
+</body>
+</html>
