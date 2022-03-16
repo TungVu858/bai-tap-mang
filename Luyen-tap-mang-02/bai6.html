@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap">Nhập
+<button onclick="add()">Add</button>
+<button onclick="tao()">Tạo</button>
+<button onclick="changer()">Thay - = _</button>
+<p id="result"></p>
+<p id="display"></p>
+<script>
+    let arr = [];
+    let x = 0;
+    let a = "";
+    let b = "-"
+    let c = "_";
+
+    function add() {
+        arr[x] = document.getElementById('nhap').value;
+        x++;
+        document.getElementById('nhap').value = "";
+    }
+
+    function tao() {
+        for (let i = 0; i < arr.length; i++) {
+            a += arr[i] + "<br>";
+        }
+        document.getElementById('result').innerHTML = arr + "<br>" ;
+    }
+
+    function changer() {
+        a = a.replace(/-/g, '_')
+        document.getElementById('display').innerHTML = a;
+    }
+</script>
+</body>
+</html>

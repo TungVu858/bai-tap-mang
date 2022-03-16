@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">Nhập
+<button onclick="add1()">Add</button>
+<button onclick="chuoi1()">Tạo chuỗi 1</button> <br> <br>
+<input id="nhap2">Nhập
+<button onclick="add2()">Add</button>
+<button onclick="chuoi2()">Tạo chuỗi 2</button>
+<br><br>
+<button onclick="sosanh()">So sánh</button>
+<p id="display"></p>
+<p id="display2"></p>
+<p id="result"></p>
+<script>
+    let arr = [];
+    let arr1 = [];
+    let b = "";
+    let c ="";
+    let x =0
+    let y =0;
+    function add1() {
+        arr[x] = document.getElementById('nhap').value;
+        x++;
+        document.getElementById('nhap').value = "";
+    }
+    function chuoi1() {
+        for (let i =0;i<arr.length;i++){
+            b+= arr[i] ;
+        } document.getElementById('display').innerHTML = arr;
+    }
+    function add2() {
+        arr1[y] = document.getElementById('nhap2').value;
+        y++;
+        document.getElementById('nhap2').value = "";
+    }
+    function chuoi2() {
+        for (let j =0;j<arr1.length;j++){
+            c+= arr1[j] ;
+        } document.getElementById('display2').innerHTML = arr1;
+    }
+    function sosanh() {
+        if (c===b){
+            document.getElementById('result').innerHTML = "chuỗi 1 = chuỗi 2" + "<br>"+" chuỗi 1 : " + arr +"<br>" +" chuỗi 2 : " +arr1;
+        }
+        else {
+            document.getElementById('result').innerHTML = "chuỗi 1 khác chuỗi 2" + "<br>"+" chuỗi 1 : " + arr +"<br>" +" chuỗi 2 : " +arr1;
+        }
+    }
+</script>
+</body>
+</html>

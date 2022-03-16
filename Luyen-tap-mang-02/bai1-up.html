@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="array"> Array[]
+<input id="array1"> Array[i]
+<button onclick="an()">Tạo</button>
+<p id="khoqua"></p>
+<p id="result"></p>
+<p id="display"></p>
+<script>
+    function an() {
+        let arr = [];
+        let b = 0;
+        let arr1 = [];
+        let num = document.getElementById('array').value;
+        let num1 = document.getElementById('array1').value;
+        for (let j = 0; j < num; j++) {
+            for (let i = 0; i < num1; i++) {
+                let a = Math.floor(Math.random() * 20);
+                arr1.push(a);
+            }
+          let  b = "[" + arr1 + "]" ;
+            arr.push([b]);
+        }
+        document.getElementById('khoqua').innerHTML = arr;
+    //     for ( num in arr){
+    //         document.getElementById('result').innerHTML = num;
+    //         for ( num1 in arr[num] ){
+    //          document.getElementById('display') .innerHTML = arr[num][num1] ;
+    //         }
+    //     }
+     }
+</script>
+</body>
+</html>
