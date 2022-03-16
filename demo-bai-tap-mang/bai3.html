@@ -5,8 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
-
-    </script>
+<script>
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    let str = 'The Quick Brown Fox';
+    for (let x = 0; x < str.length; x++) {
+        if (UPPER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toLowerCase());
+        } else if (LOWER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toUpperCase());
+        } else {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+</script>
 </body>
 </html>
