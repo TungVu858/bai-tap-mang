@@ -23,6 +23,8 @@
     let c ="";
     let x =0
     let y =0;
+    let newarr1 = '';
+    let newarr = '';
     function add1() {
         arr[x] = document.getElementById('nhap').value;
         x++;
@@ -31,7 +33,9 @@
     function chuoi1() {
         for (let i =0;i<arr.length;i++){
             b+= arr[i] ;
-        } document.getElementById('display').innerHTML = arr;
+        }
+        document.getElementById('display').innerHTML = arr;
+        newarr = arr.trim();
     }
     function add2() {
         arr1[y] = document.getElementById('nhap2').value;
@@ -40,11 +44,13 @@
     }
     function chuoi2() {
         for (let j =0;j<arr1.length;j++){
-            c+= arr1[j] ;
-        } document.getElementById('display2').innerHTML = arr1;
+            c+= arr1[j];
+        }
+        document.getElementById('display2').innerHTML = arr1;
+        newarr1 = arr1.trim();
     }
     function sosanh() {
-        if (c===b){
+        if (newarr ===newarr1){
             document.getElementById('result').innerHTML = "chuỗi 1 = chuỗi 2" + "<br>"+" chuỗi 1 : " + arr +"<br>" +" chuỗi 2 : " +arr1;
         }
         else {
